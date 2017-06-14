@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+#include "myinwindow.h"
 #include <QApplication>
 #include <QLabel>
 #include <QPushButton>
@@ -11,8 +11,33 @@ int main(int argc, char *argv[])
 {
 
     QApplication a(argc, argv);
-    // MainWindow w;
-    //w.show();
+
+    myinwindow * window = new myinwindow;
+
+    window->show();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   /*  MainWindow w;
+    w.show();
     QSpinBox *sp= new QSpinBox;
     sp->setMaximum(100);
     QSlider *sl =new QSlider(Qt::Horizontal);
@@ -25,6 +50,16 @@ int main(int argc, char *argv[])
      window->setLayout(qb);
 
      window->show();
-     QObject::connect(sl,SIGNAL(valueChanged(int)),sp,SLOT(setValue(int)));
+     QObject::connect(sl,SIGNAL(valueChanged(int)),sp,SLOT(setValue(int)));*/
+
+
+
+
+
+
+
+
+
+
     return a.exec();
 }

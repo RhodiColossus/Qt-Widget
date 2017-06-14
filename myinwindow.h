@@ -8,12 +8,12 @@
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 
-class Myinwindow:pablic QDialog{
+class myinwindow : public QDialog {
 
-    Q_OBJECT;
+    Q_OBJECT
 
 public:
-    Myinwindow(QWidget *parent =0);
+    myinwindow(QWidget *parent =0);
     private:
     QLabel *lbl;
     QLineEdit *line;
@@ -25,16 +25,6 @@ public:
 
 
 };
-
-
-
-
-
-
-
-
-
-
 
 
 
