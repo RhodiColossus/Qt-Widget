@@ -1,12 +1,15 @@
 # include <myinwindow.h>
 
 myinwindow::myinwindow (QWidget *parent) : QDialog(parent){
-    lbl = new QLabel("Enter");
+    lbl = new QLabel("&Enter");
     line= new QLineEdit;
+    lbl->setBuddy(line);
      
     cb1=new QCheckBox("Upper Registr");//chekers
     cb2=new QCheckBox("Inversion");
     ok= new QPushButton("ok");
+    ok->setDefault(true);
+    ok->setEnabled(false);
     close = new QPushButton("Close");
 
     QHBoxLayout * layout =new QHBoxLayout;
@@ -26,12 +29,42 @@ myinwindow::myinwindow (QWidget *parent) : QDialog(parent){
     main_layout->addLayout(right);
     main_layout->addLayout(left);
 
+    connect(line,SIGNAL(textChanged(QString)),this,SLOT(TextChanged(QString)));
+    connect(close,SIGNAL(clicked()),this,SLOT(close()));
     setLayout(main_layout);
-
-
-
-
-
-
-    
+    setWindowTitle("Qt-Widget");
 }
+   void myinwindow:: TextChanged(QString str){
+        ok->setEnabled(!str.isEmpty());
+    }
+
+    void myinwindow::OkClicked(){
+
+
+
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

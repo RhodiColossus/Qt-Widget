@@ -22,6 +22,11 @@ public:
     QPushButton *ok;
     QPushButton * close;
 
+    private slots :
+
+    void OkClicked();
+    void TextChanged(QString str);
+
 
 
 };
