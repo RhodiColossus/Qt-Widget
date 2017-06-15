@@ -1,10 +1,5 @@
 #include "myinwindow.h"
 #include <QApplication>
-#include <QLabel>
-#include <QPushButton>
-#include <QSpinBox>
-#include <QSlider>
-#include <QHBoxLayout>
 
 
 int main(int argc, char *argv[])
@@ -15,6 +10,9 @@ int main(int argc, char *argv[])
     myinwindow * window = new myinwindow;
 
     window->show();
+    str *n = new str;
+
+     QObject::connect(window,SIGNAL(Simple(QString)),n,SLOT(Simple(QString)));
 
 
 

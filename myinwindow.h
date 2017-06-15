@@ -7,6 +7,7 @@
 #include <QPushButton>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
+#include <QMessageBox>
 
 class myinwindow : public QDialog {
 
@@ -27,12 +28,29 @@ public:
     void OkClicked();
     void TextChanged(QString str);
 
+signals:
+    void upper_Register(QString str);
+    void invers(QString str);
+    void Simple(QString str);
+
 
 
 };
 
+class str: public QObject
+{
+    Q_OBJECT
+
+public slots:
+    void Simple(QString str)
+    {
+        QMessageBox msg;
+        msg.setText(str);
+        msg.exec();
+    }
 
 
+};
 
 
 #endif // MYINWINDOW_H
