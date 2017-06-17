@@ -69,13 +69,10 @@ public slots:
         msg.exec();}
 
     void two_upin(QString str){
-        QString s_date;
+        QString s_date=str;
         for( int i = str.size()-1, j = 0; i >= 0; i--,j++){
-            s_date[j] = str[i];
-        }
-        for(int i =0;i<str.size();i++){
-         s_date[i]=s_date.toUpper()[i];
-        }
+            s_date[j] = str[i];}
+        s_date=s_date.toUpper();
 
         QMessageBox msg;
         msg.setText(s_date);
