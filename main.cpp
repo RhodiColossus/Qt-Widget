@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
     str *n = new str;
 
      QObject::connect(window,SIGNAL(Simple(QString)),n,SLOT(Simple(QString)));
-
+    QObject::connect(window,SIGNAL(invers(QString)),n,SLOT(Inversia(QString)));
 
 
 

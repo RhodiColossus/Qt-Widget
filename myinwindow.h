@@ -48,7 +48,15 @@ public slots:
         msg.setText(str);
         msg.exec();
     }
-
+    void Inversia(QString str){
+         \
+        QString result=str;
+        for( int i = str.size()-1, j = 0; i >= 0; i--,j++){
+            result[j] = str[i];
+        }
+        QMessageBox msg;
+        msg.setText(result);
+        msg.exec();}
 
 };
 
