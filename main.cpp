@@ -14,7 +14,8 @@ int main(int argc, char *argv[])
 
      QObject::connect(window,SIGNAL(Simple(QString)),n,SLOT(Simple(QString)));
     QObject::connect(window,SIGNAL(invers(QString)),n,SLOT(Inversia(QString)));
-
+    QObject::connect(window,SIGNAL(upper_Register(QString)),n,SLOT(Uppered(QString)));
+    QObject::connect(window,SIGNAL(two(QString)),n,SLOT(two_upin(QString)));
 
 
 

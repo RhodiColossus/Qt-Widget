@@ -32,6 +32,7 @@ signals:
     void upper_Register(QString str);
     void invers(QString str);
     void Simple(QString str);
+    void two(QString str);
 
 
 
@@ -57,6 +58,31 @@ public slots:
         QMessageBox msg;
         msg.setText(result);
         msg.exec();}
+
+    void Uppered(QString str){
+        for(int i =0;i<str.size();i++){
+         str[i]=str.toUpper()[i];
+        }
+
+        QMessageBox msg;
+        msg.setText(str);
+        msg.exec();}
+
+    void two_upin(QString str){
+        QString s_date;
+        for( int i = str.size()-1, j = 0; i >= 0; i--,j++){
+            s_date[j] = str[i];
+        }
+        for(int i =0;i<str.size();i++){
+         s_date[i]=s_date.toUpper()[i];
+        }
+
+        QMessageBox msg;
+        msg.setText(s_date);
+        msg.exec();}
+
+
+
 
 };
 

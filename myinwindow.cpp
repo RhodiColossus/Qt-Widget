@@ -42,12 +42,17 @@ myinwindow::myinwindow (QWidget *parent) : QDialog(parent){
 
     void myinwindow::OkClicked(){
 
-        if(!cb1->isChecked()&& !cb2->isChecked())
+       if(!cb1->isChecked()&& !cb2->isChecked())
             Simple(line->text());
+       if(cb1->isChecked()&&cb2->isChecked()){
+           emit two    (line->text());
+       }else{
         if(cb1->isChecked())
             emit upper_Register(line->text());
         if(cb2->isChecked())
             emit invers(line->text());
+       }
+
 
 
     }
